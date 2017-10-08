@@ -1,0 +1,7 @@
+#2011_10_17   星期一   add by greshem
+build42
+1. mdf_30m:从 filedisknew.zip 里面整理出来 变化不大.
+2. 添加bug 列表 
+3. 添加 <<版本说明.txt>>
+4. 添加iss 制作版本. 
+

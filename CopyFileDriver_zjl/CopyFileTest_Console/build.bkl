@@ -1,0 +1,37 @@
+<?xml version="1.0" ?>
+<!-- $Id: bakefile_quickstart.txt,v 1.5 2006/02/11 18:41:11 KO Exp $ -->
+<makefile>
+	<exe id="CopyFileTest_Console"> 
+
+            <app-type>console</app-type>
+			<cxxflags>/D_DEBUG</cxxflags>
+			<cxxflags>/DWINDOWSCODE</cxxflags>
+			<cxxflags>/MTd</cxxflags>
+			<cxxflags>/ZI</cxxflags>
+			<ldflags>/NODEFAULTLIB:libcmt.lib</ldflags>
+			<ldflags>/DEBUG</ldflags>
+			<include>D:\usr\include</include>
+			<threading>multi</threading>
+			<lib-path>D:\usr\lib</lib-path>
+			<sys-lib>kernel32</sys-lib>
+            <sys-lib>user32</sys-lib>
+			<sys-lib>gdi32</sys-lib>
+			<sys-lib>winspool</sys-lib>
+			<sys-lib>comdlg32</sys-lib>
+			<sys-lib>advapi32</sys-lib>
+			<sys-lib>shell32</sys-lib>
+			<sys-lib>ole32</sys-lib>
+			<sys-lib>oleaut32</sys-lib>
+			<sys-lib>uuid</sys-lib>
+			<sys-lib>odbccp32</sys-lib>
+			<sys-lib>ws2_32</sys-lib>
+			<sys-lib>gtest</sys-lib>
+			<sys-lib>cppunitd</sys-lib>
+			<sys-lib>CopyFileWrapper</sys-lib>
+
+
+		<sources>$(fileList('*.cpp'))</sources> 
+     </exe>
+</makefile>
+
+

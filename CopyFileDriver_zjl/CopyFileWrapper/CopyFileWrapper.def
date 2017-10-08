@@ -1,0 +1,13 @@
+LIBRARY	"CopyFileWrapper"
+
+EXPORTS
+	IsDriverInstalled
+	InstallInfFile
+	InstallDriver
+	UninstallDriver
+	KernelCopyFile
+	KernelOpenFile
+	KernelReadFile
+	KernelCloseHandle
+	KernelGetFileSize
+	StartDriver

@@ -1,0 +1,9 @@
+LIBRARY   RTCINTER
+
+EXPORTS
+	RTW32_Initialize						@1
+	RTW32_Destroy							@2
+	RTW32_CopyFile							@3
+	RTW32_EnumRTVDiskList					@4
+	RTW32_SetNicPnp							@5
+	RTW32_QueryInfo							@6

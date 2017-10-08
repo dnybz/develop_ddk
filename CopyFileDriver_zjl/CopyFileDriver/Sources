@@ -1,0 +1,11 @@
+TARGETNAME=CopyFileDriver
+TARGETTYPE=DRIVER
+TARGETPATH=OBJ
+USE_MAPSYM=1
+LINKER_FLAGS=$(LINKER_FLAGS) /MAP:_map_ourput_file_name_.map 
+
+
+INCLUDES=$(BASEDIR)\inc;\
+	 $(BASEDIR)\inc\ddk;\
+
+SOURCES=CopyFileDriver.cpp\

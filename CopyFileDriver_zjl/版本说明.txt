@@ -1,0 +1,14 @@
+#2011_10_13   星期四   add by huanghaibo
+CopyFileDriver_zjl_r29.exe
+1.去除了CopyDirTest目录 该工程使用MFC没有实现 改用CopyFileTest_Console
+基于控制台的拷贝目录或者文件。
+2.CopyFileDriver为安装CopyFileWrapper驱动程序，安装完成后才能运行CopyFileTest拷贝文件
+3.CopyFileTest_Console 工程如果驱动安装但没运行则依赖CopyFileWrapper的lib文件
+ 中开启驱动函数。
+
+CopyFileDriver_zjl_r30.exe
+1.添加了版本说明文件 同时编辑到了ISS中。
+
+CopyFileDriver_zjl_r39.exe
+1.添加了版本说明文件 同时编辑到了ISS中。
+

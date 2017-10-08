@@ -1,0 +1,40 @@
+#!/usr/bin/perl
+use Template;
+
+my $config = {
+INTERPOLATE  => 1,		      # expand "$var" in plain text
+POST_CHOMP	  => 1,		      # cleanup whitespace
+EVAL_PERL	  => 1,		      # evaluate Perl code blocks
+};
+
+my $template = Template->new();
+$Name=shift  or die("Usage: $0 Name\n");
+#$Name="Netware";
+
+
+$tpl_input_dir="tpl_18_SDIO_SDIO_Driver";
+$tpl_output_dir="output/tpl_18_SDIO_SDIO_Driver"."_".$Name;
+
+if ( ! -d   $tpl_output_dir)
+{
+	mkdir($tpl_output_dir);
+}
+
+########################################################################
+#Éú³É App
+my $vars = {
+Name => $Name,
+members=> @array,
+};
+#$template->process($tpl_input_dir."/MyApp.tpl", $vars, "src_gen_frame/MyApp.cpp") || die $template->error();
+
+
+$template->process($tpl_input_dir."/makefile.tpl", $vars, "$tpl_output_dir//makefile") || die $template->error();
+$template->process($tpl_input_dir."/buildchk_wnet_x86.wrn.tpl", $vars, "$tpl_output_dir//buildchk_wnet_x86.wrn") || die $template->error();
+$template->process($tpl_input_dir."/SdioDev.h.tpl", $vars, "$tpl_output_dir//SdioDev.h") || die $template->error();
+$template->process($tpl_input_dir."/Sdiomain.h.tpl", $vars, "$tpl_output_dir//Sdiomain.h") || die $template->error();
+$template->process($tpl_input_dir."/Ioctls.h.tpl", $vars, "$tpl_output_dir//Ioctls.h") || die $template->error();
+$template->process($tpl_input_dir."/HelloWDM.inf.tpl", $vars, "$tpl_output_dir//HelloWDM.inf") || die $template->error();
+$template->process($tpl_input_dir."/Sources.tpl", $vars, "$tpl_output_dir//Sources") || die $template->error();
+$template->process($tpl_input_dir."/guid.h.tpl", $vars, "$tpl_output_dir//guid.h") || die $template->error();
+$template->process($tpl_input_dir."/Sdiousb.cpp.tpl", $vars, "$tpl_output_dir//Sdiousb.cpp") || die $template->error();

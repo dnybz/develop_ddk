@@ -1,0 +1,6 @@
+
+#2011_10_14   星期五   add by greshem
+1.  目标 str 总是原来的
+2.	GUI程序 不支持 目录拷贝
+3.	GUI 程序的 \\  的问题  config\system 最后 会变成  configsystem
+4.  createDirTree 的问题,r36中已解决
